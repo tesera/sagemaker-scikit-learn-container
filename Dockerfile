@@ -3,10 +3,10 @@ ARG UBUNTU_IMAGE_DIGEST=646942475da61b4ce9cc5b3fadb42642ea90e5d0de46111458e100ff
 
 FROM ubuntu:${UBUNTU_VERSION}@sha256:${UBUNTU_IMAGE_DIGEST}
 
-ARG MINICONDA_VERSION=4.9.2 # Upgraded version
+ARG MINICONDA_VERSION=4.12.0
 ARG CONDA_PY_VERSION=38
-ARG CONDA_PKG_VERSION=4.10.1 
-ARG PYTHON_VERSION=3.8.13
+ARG CONDA_PKG_VERSION=4.13.0
+ARG PYTHON_VERSION=3.10.13
 ARG PYARROW_VERSION=10.0.1
 ARG MLIO_VERSION=v0.8.0
 
@@ -121,4 +121,4 @@ ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PYTHONIOENCODING=UTF-8 LANG=C.U
 # Install Scikit-Learn
 # Scikit-learn 0.20 was the last version to support Python 2.7 and Python 3.4.
 # Scikit-learn now requires Python 3.6 or newer.
-RUN python -m pip install --no-cache -I scikit-learn==1.3.2
+RUN python -m pip install --no-cache -I scikit-learn==1.4.0
