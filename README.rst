@@ -2,6 +2,16 @@
 SageMaker Scikit-learn Container
 ===========================
 
+For Tesera users: run the following commands below. First, make sure the scripts in `dp-process-bin` are in your path, e.g. by running `PATH=/fullpath-to/dp-process-bin/:$PATH`. Then, run the commands below:
+
+```
+eval "$(./config/config_env.sh)"
+TAG=$VERSION build-container.sh
+TAG=$VERSION deploy-container.sh
+```
+
+---
+
 SageMaker Scikit-learn Container is an open source library for making the
 Scikit-learn framework run on Amazon SageMaker.
 
